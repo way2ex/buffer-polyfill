@@ -1,0 +1,36 @@
+{
+  "name": "buffer-polyfill",
+  "version": "6.0.3",
+  "description": "polyfill for buffer",
+  "type": "module",
+  "main": "./dist/buffer.umd.cjs",
+  "module": "./dist/buffer.js",
+  "exports": {
+    ".": {
+      "import": "./dist/buffer.js",
+      "require": "./dist/buffer.umd.cjs"
+    }
+  },
+  "sideeffect": true,
+  "files": [
+    "dist",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "test": "test"
+  },
+  "keywords": [
+    "buffer",
+    "polyfill"
+  ],
+  "author": "justinzhu",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "6.0.3",
+    "vite": "^3.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.10"
+  }
+}
